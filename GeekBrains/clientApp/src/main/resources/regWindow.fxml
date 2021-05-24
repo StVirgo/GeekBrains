@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:controller="com.geekbrains.chat.client.regController"
+      xmlns:fx="http://javafx.com/fxml" alignment="center">
+
+    <TextField fx:id="loginField" promptText="Логин"/>
+    <PasswordField fx:id="passwordField" promptText="Пароль"/>
+    <TextField fx:id="nicknameField" promptText="Ник пользователя"/>
+
+    <Button text="Зарегистрироваться" minWidth="100" onAction="#tryToReg"/>
+    <TextArea fx:id="textArea" VBox.vgrow="ALWAYS"/>
+
+
+</VBox>
