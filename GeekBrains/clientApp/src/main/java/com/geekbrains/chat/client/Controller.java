@@ -87,6 +87,8 @@ public class Controller{
                         String msg = in.readUTF();
                         if(msg.startsWith("/login_ok ")) {
                             setUsername(msg.split("\\s")[1]);
+                            msgArea.appendText(HistoryController.getLast100LinesOfHistory(username));
+                            HistoryController.start(username);
                             break;
                         }
 
@@ -112,11 +114,13 @@ public class Controller{
                             continue;
                         }
                         msgArea.appendText(msg);
+                        HistoryController.writeLine(msg);
                     }
                 } catch (IOException e) {
                     e.printStackTrace();
                 } finally {
                     disconnect();
+                    HistoryController.stop();
                 }
             });
             dataThread.start();
