@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.geekbrains.chat.client.loginController"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <TextField fx:id="usernameField" HBox.hgrow="ALWAYS" promptText="Введите логин..."/>
+    <PasswordField fx:id="passwordField" HBox.hgrow="ALWAYS" promptText="Введите пароль..." onAction="#login"/>
+    <Button text="Войти" onAction="#login"/>
+
+
+</VBox>
